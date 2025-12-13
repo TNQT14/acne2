@@ -99,17 +99,17 @@ Trong quá trình training, dataset được áp dụng các kỹ thuật augmen
 
 ## 2. Kết Quả Huấn Luyện
 
-### 2.1. Kết Quả Tốt Nhất Đạt Được ⭐
+### 2.1. Kết Quả Tốt Nhất Đạt Được
 
 #### Epoch Tốt Nhất: Epoch 34 (Best mAP@0.5)
 
 **Metrics Chính:**
-| Metric | Giá Trị | Phần Trăm | Đánh Giá |
-|--------|---------|-----------|----------|
-| **Precision** | 0.6314 | **63.14%** | ⭐⭐⭐⭐ Tốt |
-| **Recall** | 0.5940 | **59.40%** | ⭐⭐⭐ Khá |
-| **mAP@0.5** | 0.6300 | **63.00%** | ⭐⭐⭐⭐⭐ Xuất sắc |
-| **mAP@0.5:0.95** | 0.2834 | **28.34%** | ⭐⭐⭐ Trung bình |
+| Metric | Giá Trị | Phần Trăm |
+|--------|---------|-----------|
+| **Precision** | 0.6314 | **63.14%** |
+| **Recall** | 0.5940 | **59.40%** |
+| **mAP@0.5** | 0.6300 | **63.00%** |
+| **mAP@0.5:0.95** | 0.2834 | **28.34%** |
 
 **Loss Values (Epoch 34):**
 - **Training Box Loss**: 1.6761
