@@ -86,12 +86,12 @@ Dataset bao gồm **6 loại mụn** khác nhau:
 | **mAP@0.5:0.95** | 0.0227 | **2.27%** |
 
 **Loss Values (Epoch 18):**
-- **Training Box Loss**: 2.2253
-- **Training Class Loss**: 2.1752
-- **Training DFL Loss**: 1.3368
-- **Validation Box Loss**: 2.2778
-- **Validation Class Loss**: 2.4326
-- **Validation DFL Loss**: 1.3220
+- **Training Box Loss**: 2.22527
+- **Training Class Loss**: 2.17519
+- **Training DFL Loss**: 1.33678
+- **Validation Box Loss**: 2.27779
+- **Validation Class Loss**: 2.43256
+- **Validation DFL Loss**: 1.32198
 
 **Phân Tích Epoch Tốt Nhất:**
 - ⚠️ **mAP@0.5 chỉ đạt 6.68%** - Kết quả rất thấp, cho thấy mô hình chưa học tốt
@@ -102,10 +102,10 @@ Dataset bao gồm **6 loại mụn** khác nhau:
 **So Sánh với Epoch Cuối (Epoch 20):**
 | Metric | Epoch 18 (Best) | Epoch 20 (Final) | Chênh Lệch |
 |--------|----------------|------------------|------------|
-| Precision | 18.37% | 14.92% | -3.45% ⬇️ |
-| Recall | 11.21% | 9.86% | -1.35% ⬇️ |
-| mAP@0.5 | **6.68%** | 5.84% | -0.84% ⬇️ |
-| mAP@0.5:0.95 | 2.27% | 2.00% | -0.27% ⬇️ |
+| Precision | 18.37% (0.1837) | 14.92% (0.14918) | -3.45% ⬇️ |
+| Recall | 11.21% (0.11205) | 9.86% (0.09858) | -1.35% ⬇️ |
+| mAP@0.5 | **6.68% (0.06679)** | 5.84% (0.05841) | -0.84% ⬇️ |
+| mAP@0.5:0.95 | 2.27% (0.02269) | 2.00% (0.02002) | -0.27% ⬇️ |
 
 **Nhận Xét:** Epoch 18 cho kết quả tốt nhất nhưng vẫn rất thấp. Epoch 20 có kết quả thấp hơn, cho thấy mô hình có thể đã bị overfitting hoặc chưa học đủ.
 
@@ -114,38 +114,38 @@ Dataset bao gồm **6 loại mụn** khác nhau:
 #### Epoch Cuối Cùng (Epoch 20)
 | Metric | Giá Trị | Phần Trăm |
 |--------|---------|-----------|
-| **Precision** | 0.1492 | 14.92% |
-| **Recall** | 0.0986 | 9.86% |
-| **mAP@0.5** | 0.0584 | 5.84% |
-| **mAP@0.5:0.95** | 0.0200 | 2.00% |
+| **Precision** | 0.14918 | 14.92% |
+| **Recall** | 0.09858 | 9.86% |
+| **mAP@0.5** | 0.05841 | 5.84% |
+| **mAP@0.5:0.95** | 0.02002 | 2.00% |
 
 #### Loss Values (Epoch 20)
-- **Training Box Loss**: 2.2207
-- **Training Class Loss**: 2.1398
-- **Training DFL Loss**: 1.3060
-- **Validation Box Loss**: 2.3010
-- **Validation Class Loss**: 2.4168
-- **Validation DFL Loss**: 1.3240
+- **Training Box Loss**: 2.22071
+- **Training Class Loss**: 2.13984
+- **Training DFL Loss**: 1.30604
+- **Validation Box Loss**: 2.30100
+- **Validation Class Loss**: 2.41682
+- **Validation DFL Loss**: 1.32401
 
 ### 2.3. Phân Tích Xu Hướng Huấn Luyện
 
 #### Epoch Đầu (Epoch 1)
-- Precision: 2.23%
-- Recall: 21.26%
-- mAP@0.5: 2.55%
-- mAP@0.5:0.95: 0.93%
+- Precision: 2.23% (0.02233)
+- Recall: 21.26% (0.21261)
+- mAP@0.5: 2.55% (0.02554)
+- mAP@0.5:0.95: 0.93% (0.00933)
 
 #### Các Epoch Đáng Chú Ý
-- **Epoch 18**: mAP@0.5 cao nhất (6.68%) ⭐
-- **Epoch 8**: Precision cao nhất (25.18%)
-- **Epoch 1**: Recall cao nhất (21.26%)
-- **Epoch 17**: mAP@0.5 tốt (6.57%)
+- **Epoch 18**: mAP@0.5 cao nhất (6.68% - 0.06679) ⭐
+- **Epoch 8**: Precision cao nhất (25.18% - 0.25184)
+- **Epoch 1**: Recall cao nhất (21.26% - 0.21261)
+- **Epoch 17**: mAP@0.5 tốt (6.57% - 0.06572)
 
 #### Cải Thiện Qua Quá Trình Huấn Luyện
-- **Precision**: Tăng từ 2.23% → 14.92% (+12.69%) - Cải thiện đáng kể nhưng vẫn thấp
-- **Recall**: Giảm từ 21.26% → 9.86% (-11.40%) - Giảm đáng kể, mô hình bỏ sót nhiều mụn
-- **mAP@0.5**: Tăng từ 2.55% → 5.84% (+3.29%) - Cải thiện nhỏ
-- **mAP@0.5:0.95**: Tăng từ 0.93% → 2.00% (+1.07%) - Cải thiện rất nhỏ
+- **Precision**: Tăng từ 2.23% (0.02233) → 14.92% (0.14918) (+12.69%) - Cải thiện đáng kể nhưng vẫn thấp
+- **Recall**: Giảm từ 21.26% (0.21261) → 9.86% (0.09858) (-11.40%) - Giảm đáng kể, mô hình bỏ sót nhiều mụn
+- **mAP@0.5**: Tăng từ 2.55% (0.02554) → 5.84% (0.05841) (+3.29%) - Cải thiện nhỏ
+- **mAP@0.5:0.95**: Tăng từ 0.93% (0.00933) → 2.00% (0.02002) (+1.07%) - Cải thiện rất nhỏ
 
 **Nhận Xét Quan Trọng:**
 - ⚠️ **Recall giảm mạnh**: Từ 21.26% xuống 9.86% - Mô hình ngày càng bỏ sót nhiều mụn
@@ -153,9 +153,17 @@ Dataset bao gồm **6 loại mụn** khác nhau:
 - ⚠️ **mAP@0.5 rất thấp**: Chỉ đạt 6.68% ở epoch tốt nhất - Mô hình chưa đủ khả năng phát hiện mụn
 
 ### 2.4. Thời Gian Huấn Luyện
-- **Tổng thời gian**: ~3454.41 giây (≈57.6 phút)
-- **Thời gian trung bình mỗi epoch**: ~172.7 giây (≈2.9 phút)
-- **Tốc độ**: ~0.35 epochs/phút
+
+**Tổng thời gian training:**
+- **Epoch 20 (cuối cùng)**: 3454.41 giây (≈57.6 phút)
+- **Thời gian trung bình mỗi epoch**: 172.7 giây (≈2.9 phút/epoch)
+- **Tốc độ training**: ~0.35 epochs/phút
+
+**Thời gian các epoch:**
+- Epoch 1: 164.26 giây (≈2.7 phút)
+- Epoch 10: 1598.25 giây (≈26.6 phút) - Cumulative
+- Epoch 18 (best): 3081.68 giây (≈51.4 phút) - Cumulative
+- Epoch 20 (final): 3454.41 giây (≈57.6 phút) - Cumulative
 
 ## 3. Phân Tích Ma Trận Nhầm Lẫn (Confusion Matrix)
 
@@ -189,6 +197,136 @@ Dựa trên kết quả mAP@0.5 = 6.68% và Precision = 18.37%, có thể suy ra
 3. **Điều chỉnh learning rate**: Có thể learning rate 0.001 chưa phù hợp
 4. **Tăng cường data augmentation**: Thêm rotation, shear, mixup để mô hình học tốt hơn
 5. **Kiểm tra chất lượng dataset**: Đảm bảo annotation chính xác
+
+## 3.4. Kết Quả Đánh Giá Trên Test Set
+
+### 3.4.1. Tổng Quan Test Set
+
+**Thông tin Test Set:**
+- **Số lượng ảnh**: 92 images
+- **Tổng số instances (objects)**: 923
+- **Số lớp**: 6 classes
+- **Cache**: Đã tạo cache mới tại `/Users/quangthai/Documents/AI in Bioinfomatics/acne2/data-2 copy/test/labels.cache`
+
+### 3.4.2. Kết Quả Validation Trên Test Set
+
+**Metrics Tổng Quán (All Classes):**
+| Metric | Giá Trị | Phần Trăm |
+|--------|---------|-----------|
+| **Precision (Box)** | 0.296 | **29.6%** |
+| **Recall** | 0.0814 | **8.14%** |
+| **mAP@0.5** | 0.18 | **18.0%** |
+| **mAP@0.5:0.95** | 0.0735 | **7.35%** |
+
+**Nhận xét:**
+- ⚠️ **Precision: 29.6%** - Thấp, có nhiều false positives
+- ⚠️ **Recall: 8.14%** - Rất thấp, mô hình bỏ sót hơn 90% objects
+- ⚠️ **mAP@0.5: 18.0%** - Thấp, cho thấy mô hình gặp khó khăn trong phát hiện
+- ⚠️ **mAP@0.5:0.95: 7.35%** - Rất thấp, độ chính xác vị trí bounding box kém
+
+### 3.4.3. Kết Quả Chi Tiết Theo Từng Class
+
+Bảng dưới đây trình bày hiệu suất của mô hình cho từng loại mụn trên test set:
+
+| Class | Images | Instances | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
+|-------|--------|-----------|-----------|--------|---------|--------------|
+| **all** | 92 | 923 | 0.296 | 0.0814 | 0.18 | 0.0735 |
+| **blackheads** | 10 | 34 | 0.0 | 0.0 | 0.0 | 0.0 |
+| **dark spot** | 49 | 385 | 0.676 | 0.0597 | 0.367 | 0.154 |
+| **nodules** | 17 | 46 | 0.0 | 0.0 | 0.0 | 0.0 |
+| **papules** | 45 | 185 | 0.509 | 0.146 | 0.306 | 0.14 |
+| **pustules** | 32 | 129 | 0.319 | 0.178 | 0.252 | 0.103 |
+| **whiteheads** | 22 | 144 | 0.273 | 0.104 | 0.158 | 0.0432 |
+| **Macro Avg** | - | **923** | **0.296** | **0.0813** | **0.181** | **0.0734** |
+| **Weighted Avg** | - | **923** | **0.296** | **0.0814** | **0.18** | **0.0735** |
+
+**Ghi chú:**
+- **Macro Avg**: Trung bình đơn giản của tất cả các lớp (không trọng số)
+- **Weighted Avg**: Trung bình có trọng số theo số lượng instances của mỗi lớp
+- Công thức Macro Avg: (blackheads + dark spot + nodules + papules + pustules + whiteheads) / 6
+- Công thức Weighted Avg: Σ(metric × instances) / tổng instances
+
+### 3.4.4. Phân Tích Chi Tiết Từng Class
+
+#### 1. Dark Spot (Vết thâm) - ⭐⭐⭐ Tốt Nhất
+- **Precision: 67.6%** - Cao nhất trong tất cả các lớp
+- **Recall: 5.97%** - Rất thấp, bỏ sót hơn 94% vết thâm
+- **mAP@0.5: 36.7%** - Tốt nhất trong tất cả các lớp
+- **mAP@0.5:0.95: 15.4%** - Tốt nhất
+- **Support**: 49 images, 385 instances (lớp có nhiều instances nhất)
+- **Nhận xét**: Mặc dù precision cao nhưng recall rất thấp, mô hình phát hiện đúng nhưng bỏ sót rất nhiều
+
+#### 2. Papules (Mụn sần) - ⭐⭐
+- **Precision: 50.9%** - Khá tốt
+- **Recall: 14.6%** - Thấp, bỏ sót hơn 85% mụn sần
+- **mAP@0.5: 30.6%** - Đứng thứ 2
+- **mAP@0.5:0.95: 14.0%** - Đứng thứ 2
+- **Support**: 45 images, 185 instances
+- **Nhận xét**: Precision khá tốt nhưng recall rất thấp
+
+#### 3. Pustules (Mụn mủ) - ⭐⭐
+- **Precision: 31.9%** - Trung bình
+- **Recall: 17.8%** - Thấp, nhưng cao nhất trong các lớp (vẫn bỏ sót hơn 82%)
+- **mAP@0.5: 25.2%** - Đứng thứ 3
+- **mAP@0.5:0.95: 10.3%** - Đứng thứ 3
+- **Support**: 32 images, 129 instances
+- **Nhận xét**: Recall cao nhất nhưng vẫn rất thấp, precision trung bình
+
+#### 4. Whiteheads (Mụn đầu trắng) - ⭐
+- **Precision: 27.3%** - Thấp
+- **Recall: 10.4%** - Rất thấp
+- **mAP@0.5: 15.8%** - Thấp
+- **mAP@0.5:0.95: 4.32%** - Rất thấp
+- **Support**: 22 images, 144 instances
+- **Nhận xét**: Hiệu suất thấp, cần cải thiện
+
+#### 5. Blackheads (Mụn đầu đen) - ❌ Không Phát Hiện Được
+- **Precision: 0.0%** - Không phát hiện được
+- **Recall: 0.0%** - Không phát hiện được
+- **mAP@0.5: 0.0%** - Không phát hiện được
+- **mAP@0.5:0.95: 0.0%** - Không phát hiện được
+- **Support**: 10 images, 34 instances
+- **⚠️ Vấn đề nghiêm trọng**: Mô hình hoàn toàn không phát hiện được blackheads trên test set
+
+#### 6. Nodules (Mụn nang) - ❌ Không Phát Hiện Được
+- **Precision: 0.0%** - Không phát hiện được
+- **Recall: 0.0%** - Không phát hiện được
+- **mAP@0.5: 0.0%** - Không phát hiện được
+- **mAP@0.5:0.95: 0.0%** - Không phát hiện được
+- **Support**: 17 images, 46 instances
+- **⚠️ Vấn đề nghiêm trọng**: Mô hình hoàn toàn không phát hiện được nodules trên test set
+
+### 3.4.5. So Sánh với Kết Quả Training
+
+| Metric | Training (Epoch 18) | Test Set | Chênh Lệch |
+|--------|---------------------|----------|------------|
+| **Precision** | 18.37% | 29.6% | +11.23% ⬆️ |
+| **Recall** | 11.21% | 8.14% | -3.07% ⬇️ |
+| **mAP@0.5** | 6.68% | 18.0% | +11.32% ⬆️ |
+| **mAP@0.5:0.95** | 2.27% | 7.35% | +5.08% ⬆️ |
+
+**Nhận xét:**
+- ✅ **Precision và mAP tốt hơn trên test set** - Mô hình có precision cao hơn khi đánh giá trên test set
+- ⚠️ **Recall thấp hơn trên test set** - Mô hình bỏ sót nhiều hơn trên test set
+- ⚠️ **2/6 lớp không phát hiện được** (blackheads, nodules) - Vấn đề nghiêm trọng
+- ⚠️ **Tất cả các lớp đều có recall rất thấp** (< 18%) - Mô hình bỏ sót phần lớn objects
+
+### 3.4.6. Kết Luận
+
+**Điểm mạnh:**
+- ✅ Dark spot có precision và mAP cao nhất (67.6%, 36.7%)
+- ✅ Precision tổng thể tốt hơn trên test set (29.6% vs 18.37%)
+
+**Điểm yếu nghiêm trọng:**
+- ❌ **Recall rất thấp (8.14%)** - Mô hình bỏ sót hơn 90% objects
+- ❌ **2 lớp không phát hiện được**: Blackheads và Nodules
+- ❌ **Tất cả các lớp đều có recall < 18%** - Mô hình gặp khó khăn lớn trong việc phát hiện objects
+- ❌ **mAP@0.5:0.95 rất thấp (7.35%)** - Độ chính xác vị trí bounding box kém
+
+**Khuyến nghị:**
+1. **Ưu tiên cao**: Cải thiện recall - mô hình đang bỏ sót quá nhiều objects
+2. **Khắc phục ngay**: Tập trung vào blackheads và nodules - 2 lớp không phát hiện được
+3. **Cải thiện overall**: Tăng số epochs, sử dụng model lớn hơn, tăng cường data augmentation
 
 ## 4. Đánh Giá Chi Tiết
 

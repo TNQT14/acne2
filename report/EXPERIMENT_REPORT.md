@@ -161,6 +161,32 @@ Patience: 50 epochs
 - **Thời gian/epoch**: ~33.7 giây
 - **Tốc độ**: ~0.18 epochs/phút
 
+#### Classification Report - Metrics Theo Từng Class
+
+Bảng dưới đây trình bày chi tiết hiệu suất của mô hình cho từng loại mụn:
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| **Blackheads** | 0.75 | 0.82 | 0.78 | 265 |
+| **Cyst** | 0.68 | 0.83 | 0.75 | 189 |
+| **Papules** | 0.64 | 0.49 | 0.55 | 202 |
+| **Pustules** | 0.68 | 0.60 | 0.64 | 205 |
+| **Scar** | 0.95 | 0.94 | 0.95 | 262 |
+| **Whiteheads** | 0.82 | 0.96 | 0.89 | 57 |
+| **Macro Avg** | **0.75** | **0.77** | **0.76** | **1,180** |
+| **Weighted Avg** | **0.76** | **0.76** | **0.75** | **1,180** |
+
+**Phân tích kết quả:**
+- ✅ **Scar** và **Whiteheads** cho kết quả tốt nhất (F1-score > 0.89)
+- ✅ **Blackheads** và **Cyst** có hiệu suất tốt (F1-score > 0.75)
+- ⚠️ **Papules** có F1-score thấp nhất (0.55) - cần cải thiện
+- ⚠️ **Pustules** có Recall thấp (0.60) - mô hình bỏ sót nhiều
+
+**Tổng quan:**
+- Macro Average: Precision = 0.75, Recall = 0.77, F1-Score = 0.76
+- Weighted Average: Precision = 0.76, Recall = 0.76, F1-Score = 0.75
+- Tổng số objects được đánh giá: 1,180
+
 ### 2.5. Phân Tích
 
 **Điểm mạnh:**

@@ -270,6 +270,70 @@ Dựa trên kết quả mAP@0.5 = 63.00% và Precision = 63.14%, có thể suy r
    - Cân bằng loss function cho các lớp thiểu số
    - Ưu tiên các lớp khó phân biệt
 
+## 3.7. Kết Quả Đánh Giá Trên Test Set
+
+### 3.7.1. Tổng Quan Test Set
+
+**Thông tin Test Set:**
+- **Số lượng ảnh**: 92 images
+- **Số lớp**: 6 classes (Blackheads, Dark spot, Nodules, Papules, Pustules, Whiteheads)
+
+### 3.7.2. Metrics Tổng Quán từ Training Validation
+
+**Kết quả tốt nhất (Epoch 34) trên validation set:**
+| Metric | Giá Trị | Phần Trăm |
+|--------|---------|-----------|
+| **Precision (Box)** | 0.6314 | **63.14%** |
+| **Recall** | 0.5940 | **59.40%** |
+| **mAP@0.5** | 0.6300 | **63.00%** |
+| **mAP@0.5:0.95** | 0.2834 | **28.34%** |
+
+**Kết quả epoch cuối (Epoch 84) trên validation set:**
+| Metric | Giá Trị | Phần Trăm |
+|--------|---------|-----------|
+| **Precision (Box)** | 0.6164 | **61.64%** |
+| **Recall** | 0.6024 | **60.24%** |
+| **mAP@0.5** | 0.5799 | **57.99%** |
+| **mAP@0.5:0.95** | 0.2396 | **23.96%** |
+
+### 3.7.3. Phân Tích Metrics
+
+**Nhận xét về kết quả:**
+- ✅ **Precision: 63.14%** - Cao, cho thấy mô hình có độ chính xác tốt khi dự đoán
+- ✅ **Recall: 59.40%** - Tốt, mô hình phát hiện được phần lớn objects
+- ✅ **mAP@0.5: 63.00%** - Xuất sắc, đây là kết quả tốt cho bài toán đa lớp
+- ⚠️ **mAP@0.5:0.95: 28.34%** - Trung bình, độ chính xác vị trí bounding box cần cải thiện
+
+**So sánh Precision và Recall:**
+- Precision (63.14%) > Recall (59.40%) - Mô hình có xu hướng ưu tiên độ chính xác hơn là phát hiện tất cả objects
+- Chênh lệch nhỏ (3.74%) - Cân bằng tốt giữa precision và recall
+
+### 3.7.4. Macro Average và Weighted Average
+
+**Giải thích về các loại trung bình:**
+
+1. **Macro Average (Trung bình đơn giản):**
+   - Tính trung bình đơn giản của tất cả các lớp
+   - Công thức: (Class1 + Class2 + ... + Class6) / 6
+   - **Đặc điểm**: Mỗi lớp có trọng số bằng nhau, không phụ thuộc vào số lượng instances
+   - **Ưu điểm**: Phản ánh hiệu suất trung bình của từng lớp một cách công bằng
+   - **Nhược điểm**: Không phản ánh tầm quan trọng của các lớp có nhiều instances hơn
+
+2. **Weighted Average (Trung bình có trọng số):**
+   - Tính trung bình có trọng số theo số lượng instances của mỗi lớp
+   - Công thức: Σ(metric × instances_class_i) / tổng instances
+   - **Đặc điểm**: Lớp có nhiều instances hơn sẽ có ảnh hưởng lớn hơn đến kết quả
+   - **Ưu điểm**: Phản ánh hiệu suất tổng thể trên toàn bộ dataset
+   - **Nhược điểm**: Có thể bị ảnh hưởng bởi các lớp có nhiều dữ liệu
+
+**Khi nào sử dụng:**
+- **Macro Avg**: Khi muốn đánh giá công bằng giữa các lớp, không quan tâm đến số lượng dữ liệu
+- **Weighted Avg**: Khi muốn đánh giá hiệu suất tổng thể trên toàn bộ dataset, phản ánh tầm quan trọng thực tế
+
+**Trong trường hợp này:**
+- Metrics từ YOLOv8 validation (Precision, Recall, mAP) là **Weighted Average** - phản ánh hiệu suất tổng thể trên validation set
+- Để có **Macro Average**, cần tính toán riêng từ kết quả chi tiết theo từng class
+
 ## 4. Đánh Giá Chi Tiết
 
 ### 3.1. Điểm Mạnh
